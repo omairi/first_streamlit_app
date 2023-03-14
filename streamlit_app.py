@@ -59,7 +59,7 @@ streamlit.write('The user entered ', fruit_choice)
 #my_cur = my_cnx.cursor()
 #my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
 #my_data_row = my_cur.fetchone()
-streamlit.text("Hello from Snowflake:")
+streamlit.header("View Our Fruit List - Add Your Favorites!")
 #streamlit.text(my_data_row)
 
 # write your own comment - what does this do?
@@ -70,7 +70,7 @@ def get_fruit_load_list():
          return my_cur.fetchall()
 
 # Add a button to load the fruit
-if streamlit.button('Get fruit Load List'):
+if streamlit.button('Get fruit List'):
    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
    my_data_rows= get_fruit_load_list()
    my_cnx.close()
