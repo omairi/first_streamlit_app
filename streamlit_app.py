@@ -63,7 +63,7 @@ streamlit.text("Hello from Snowflake:")
 #streamlit.text(my_data_row)
 
 # write your own comment - what does this do?
-@Snowflake related function
+#Snowflake related function
 def get_fruit_load_list():
       with my_cnx.cursor() as my_cur:
            my_cur.execute("SELECT * FROM FRUIT_LOAD_LIST")
